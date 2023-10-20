@@ -1,5 +1,80 @@
-﻿title: NewYarnScript
-tags:
+﻿title: Start
 ---
+<<declare $PlayerName =  "">>
+QuickDraw Quinn: Hey, Looks like you're finally waking up. 
+QuickDraw Quinn: You sure got hit hard. You remember your name kid? 
+-> Jack
+    <<set $PlayerName = "Jack">>
+-> John
+    <<set $PlayerName = "John">>
+-> Dan
+    <<set $PlayerName = "Dan">>
+QuickDraw Quinn: Well, good to hear {$PlayerName}, it looks like your head still works. 
+QuickDraw Quinn: We got captured by Bill. Most of the crew went down with the ship...
+QuickDraw Quinn: I overheard some of the crew talking not long ago, and were headed straight for Skull's Keep. 
+QuickDraw Quinn: Who knows what they will do to us if they were able to get someone to tell them that much. 
+QuickDraw Quinn: We gotta work together, kid. It's our only shot at survival 
+QuickDraw Quinn: got it?
+-> What did they do the crew?
+    QuickDraw Quinn: Don't worry about that now kid, we gotta focus on getting out of here.
+    <<jump encounter>>
+-> Got it.
+    QuickDraw Quinn: That's my boy, now let's start thinking of a way out of here.
+    <<jump encounter>>
+-> Are we going to die?
+    QuickDraw Quinn: Focus, Kid!
+    -> Sorry, I got it.
+        QuickDraw Quinn: That's my boy, now let's start thinking of a way out of here.
+        <<jump encounter>>
 
+
+===
+
+title: encounter
+---
+Unknown: finally, you're awake!
+A large figure bursts into the room
+it's none other than the captain himself, Black-Haired Bill
+Bill: Now boy! Where is that filthy captain of yours hiding it!?
+-> Hiding what?
+    Bill: The treasure! I know it's on the island you mutt!
+    -> I don't know what you're talking about
+        Bill: I've had enough of you! Men!
+        <<jump death>>
+-> I'll never share with filth like you!
+    Bill: why you!
+    bill winds up a kick towards your head
+    your vision goes blurry, you hear muttled screams
+    QuickDraw Quinn: {$PlayerName}! No!
+    <<jump continue>>
+-> It's 12 Steps into the cavern, then three paces to the left!
+     Bill: wow, that was easy. Thanks kid, you're a real help harhar!
+     Bill: gentlemen! take out the trash!
+     <<jump death>>
+
+===
+
+title: death
+---
+You watch as on of Bill's crew unsheaths his sword, and raises it above you head
+A large cry erupts from the man as he begins swinging down
+QuickDraw Quinn: Kid! No!
+Everything fades to black.
+-> restart?
+    <<jump encounter>>
+-> Quit
+    <<stop>>
+===
+
+title: continue
+---
+unknown: LAND HO!
+A blistering headache greets you as you come to
+You: Quinn?
+QuickDraw Quinn: *Shhhh!* kid! I thought you were a goner!
+You: where are we?
+QuickDraw Quinn: We just landed at Skull Fort, kid.
+QuickDraw Quinn: its time for us to get out of here!
+You: Let's Go!
+To Be Continued!
 ===
